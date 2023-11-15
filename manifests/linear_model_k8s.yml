@@ -13,7 +13,7 @@ spec:
         app: {model_name}-server
     spec:
       containers:
-      - name: {model_name}-container
+      - name: {model_name}
         #image: gcr.io/tensorflow-serving/resnet 
         image: docker.io/{DOCKER_USER}/tensorflow-linear-model:{github.sha}
         ports:
