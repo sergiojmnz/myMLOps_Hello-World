@@ -1,3 +1,4 @@
+#manifest
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -13,9 +14,9 @@ spec:
         app: {model_name}-server
     spec:
       containers:
-      - name: {model_name}
+      - name: {model_name}-container
         #image: gcr.io/tensorflow-serving/resnet 
-        image: docker.io/{DOCKER_USER}/tensorflow-linear-model:{github.sha}
+        image: docker.io/{docker_user}/tensorflow-{model_name}:{github.sha}
         ports:
         - containerPort: 8501
 ---
