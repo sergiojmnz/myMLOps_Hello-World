@@ -1,5 +1,6 @@
 import numpy as np
 import os
+import tensorflow as tf
 #import matplotlib.pyplot as plt
  
 # TensorFlow
@@ -9,7 +10,7 @@ print(tf.__version__)
 
 X = np.arange(-10.0, 10.0, 1e-2)
 np.random.shuffle(X)
-y =  10.0 * X + 0.0
+y = 10.0 * X + 20.0 #formula modificada
 
 train_end = int(0.6 * len(X))
 #print (train_end)
